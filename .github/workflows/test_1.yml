@@ -9,3 +9,19 @@ jobs:
     steps:
     - name: Hola mundo steps
       run: echo "Hola mundo github actions!!!"
+  
+    - name: Crear archivo
+      run: touch saludo.txt
+      
+    - name: Escribir archivo
+      run: echo "Hola mundo github actions!!!" >> saludo.txt
+      
+    - name: Leer archivo
+      run: cat saludo.txt
+
+  trabajo2:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: comando ls
+      run: ls -al
